@@ -2,15 +2,11 @@ import React from "react";
 import "./App.css";
 
 const rowRenderer = ({ index, style }) => {
-  // const item = this.state.list[index];
   const item = index;
   return (
     <li
       key={item}
       style={style}
-      onClick={() => {
-        console.log("item-", index);
-      }}
     >
       item-{item}
     </li>
@@ -20,7 +16,7 @@ const rowRenderer = ({ index, style }) => {
 export default class App extends React.Component {
   state = { scrollTop: 0 };
   height = 800;
-  total = 10000;
+  total = 1000;
   rowHeight = 80;
   bufferSize = 5;
 
